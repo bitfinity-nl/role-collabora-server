@@ -13,10 +13,10 @@
 # -- Collabora Online 
 #
 # Variable(s):
-#   col_servername              : 'collabora.example.com'               #
-#   col_sslcertificatefile      : '/path/to/signed_certificate'         #
-#   col_sslcertificatechainfile : '/path/to/intermediate_certificate'   #
-#   col_sslcertificateKeyfile   : '/path/to/private/key'                #
+#   col_servername              : 'collabora.example.com'               # Set server/(sub)domain name.
+#   col_sslcertificatefile      : '/path/to/signed_certificate'         # Set path to certificate.
+#   col_sslcertificatechainfile : '/path/to/intermediate_certificate'   # Set path to certificate chain.
+#   col_sslcertificateKeyfile   : '/path/to/private/key'                # Set path to privatekey.
 #
 col_servername              : 'collabora.example.com'
 col_sslcertificatefile      : '/path/to/signed_certificate'
