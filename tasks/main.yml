@@ -5,6 +5,7 @@
 # File: tasks/main.yml
 # Original sources:
 #   - https://www.collaboraoffice.com/code/linux-packages/
+#   - https://www.linuxbabe.com/ubuntu/integrate-collabora-onlinenextcloud-without-docker
 #
 # Description:
 #   Role for deploying a Collabora server.
