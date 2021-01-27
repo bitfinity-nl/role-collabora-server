@@ -45,7 +45,7 @@
 - name: "Transfer Apache2 templates"
   template:
     src: "{{ item.src }}"
-    dest: "{{ item.dest }}
+    dest: "{{ item.dest }}"
     owner: root
     group: root
     mode: 0644
