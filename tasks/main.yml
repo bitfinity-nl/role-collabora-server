@@ -81,3 +81,8 @@
 - name: "Configure loolwsd via commandline"
   raw: "{{ col_loolwsd_admin }} | loolconfig set-admin-password"  
   notify: restart_loolwsd
+
+- name: "Configure UFW firewall"
+  ufw:
+    rule: allow
+    name: Apache
