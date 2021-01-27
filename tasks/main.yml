@@ -55,10 +55,17 @@
   notify: restart_apache2
 
 - name: "Disable default site"
-  command: "a2ensite {{ item }}"
+  command: "a2dissite {{ item }}"
   with_items:
     - 000-default
     - default-ssl
   notify: restart_apache2
   
-  
+- name: "Configure loolwsd via commandline"
+  command: "{{ item }}"  
+  with_items:
+    - 'loolconfig set ssl.enable false'
+    - 'loolconfig set ssl.termination true'
+    - 'loolconfig set storage.wopi.host {{ col_loolwsd_server }}'
+    - 'loolconfig set-admin-password {{ col_loolwsd_admin }}'
+  notify: restart_loolwsd
