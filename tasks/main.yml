@@ -52,5 +52,5 @@
 
 - name: "Enable site"
   command: a2ensite collabora-ssl
-
+  notify: restart_apache2
 
