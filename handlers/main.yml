@@ -9,7 +9,12 @@
 # Description:
 #   Role for deploying a Collabora server.
 
-- name: restart_apache2
-  service:
+- name: "restart_apache2"
+  systemd:
     name: apache2
+    state: restarted
+
+- name: "restart_loolwsd"
+  systemd:
+    name: loolwsd
     state: restarted
