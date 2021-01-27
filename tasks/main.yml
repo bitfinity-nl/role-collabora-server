@@ -54,3 +54,11 @@
   command: a2ensite collabora-ssl
   notify: restart_apache2
 
+- name: "Disable default site"
+  command: "a2ensite {{ item }}"
+  with_items:
+    - 000-default
+    - default-ssl
+  notify: restart_apache2
+  
+  
