@@ -49,4 +49,8 @@
     owner: root
     group: root
     mode: 0744
-    
+
+- name: "Enable site"
+  command: a2ensite collabora-ssl
+
+
