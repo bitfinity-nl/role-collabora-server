@@ -42,11 +42,11 @@
     - proxy_http
     - ssl
     
-- name: "Transfer Apache2 templates"
-  template:
-    src: collabora-ssl.conf.j2
-    dest: /etc/apache2/sites-available/collabora-ssl.conf
-    owner: root
-    group: root
-    mode: 0744
+#- name: "Transfer Apache2 templates"
+#  template:
+#    src: collabora-ssl.conf.j2
+#    dest: /etc/apache2/sites-available/collabora-ssl.conf
+#    owner: root
+#    group: root
+#    mode: 0744
     
