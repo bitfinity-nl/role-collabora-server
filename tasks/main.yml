@@ -67,5 +67,5 @@
     - 'loolconfig set ssl.enable false'
     - 'loolconfig set ssl.termination true'
     - 'loolconfig set storage.wopi.host {{ col_loolwsd_server }}'
-    - 'loolconfig set-admin-password {{ col_loolwsd_admin }}'
+    - '{{ col_loolwsd_admin }} | loolconfig set-admin-password'
   notify: restart_loolwsd
