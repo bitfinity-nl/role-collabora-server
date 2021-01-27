@@ -2,12 +2,12 @@
 # Title: role-colobora
 #
 # Author: Bitfinity-NL / L. Rutten
-# File: tasks/20.04/nexcloud-code.yml
+# File: tasks/main.yml
 # Original sources:
 #   - https://www.collaboraoffice.com/code/linux-packages/
 #
 # Description:
-#   Role for deploy a Nextcloud server.
+#   Role for deploying a Collabora server.
 
 - name: "Import the signing key"
   apt_key:
