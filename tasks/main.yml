@@ -54,19 +54,20 @@
     - { src: 'collabora.conf.j2', dest: '/etc/apache2/sites-available/collabora.conf' }
     - { src: 'collabora-ssl.conf.j2', dest: '/etc/apache2/sites-available/collabora-ssl.conf' }
 
-- name: "Enable site"
-  command: a2ensite collabora
-  notify: restart_apache2
+#- name: "Enable site"
+#  command: a2ensite collabora
+#  notify: restart_apache2
 
 - name: "Enable site"
   command: a2ensite collabora-ssl 
   notify: restart_apache2
   
-- name: "Disable default site"
+- name: "Disable all default sites (http/https)"
   command: "a2dissite {{ item }}"
   with_items:
     - 000-default
     - default-ssl
+    - 000-default-le-ssl
   notify: restart_apache2
   
 - name: "Configure loolwsd via commandline"
