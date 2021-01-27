@@ -1,5 +1,13 @@
 ---
-
+# Title: role-colobora
+#
+# Author: Bitfinity-NL / L. Rutten
+# File: handlers/main.yml
+# Original sources:
+#   - https://www.collaboraoffice.com/code/linux-packages/
+#
+# Description:
+#   Role for deploying a Collabora server.
 
 - name: restart_apache2
   service:
