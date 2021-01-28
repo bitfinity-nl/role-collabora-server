@@ -18,3 +18,7 @@
   systemd:
     name: loolwsd
     state: restarted
+
+- name: "update_fonts"
+  command: fc-cache
+
