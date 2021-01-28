@@ -82,6 +82,13 @@
   raw: "{{ col_loolwsd_admin }} | loolconfig set-admin-password"  
   notify: restart_loolwsd
 
+- name: "Install additional fonts via APT"
+  apt:
+    pkg:
+    - ttf-ubuntu-font-family
+    - ttf-mscorefonts-installer
+  notify: update_fonts  
+    
 - name: "Configure UFW firewall"
   ufw:
     rule: allow
