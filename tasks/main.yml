@@ -30,6 +30,7 @@
     pkg:
     - apache2
     - loolwsd
+    - mlocate
     - code-brand
     - collaboraoffice*
 
@@ -53,10 +54,6 @@
   with_items:
     - { src: 'collabora.conf.j2', dest: '/etc/apache2/sites-available/collabora.conf' }
     - { src: 'collabora-ssl.conf.j2', dest: '/etc/apache2/sites-available/collabora-ssl.conf' }
-
-#- name: "Enable site"
-#  command: a2ensite collabora
-#  notify: restart_apache2
 
 - name: "Enable site"
   command: a2ensite collabora-ssl 
